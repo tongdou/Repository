@@ -11,5 +11,17 @@
 
     <artifactId>clazz</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>3.2.18.RELEASE</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.itranswarp</groupId>
+            <artifactId>compiler</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>
