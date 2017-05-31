@@ -14,5 +14,6 @@
 用户名:${user.userName}
 <br/>
 密码:${user.credits}
+登录次数：${count}
 </body>
 </html>

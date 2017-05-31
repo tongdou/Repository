@@ -33,7 +33,7 @@ public class PermSizeTest {
         StringBuffer sb = new StringBuffer();
         sb.append(SINGLE_JAVA);
         // add 10000 motheds
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10000; i++) {
             sb.append("    public boolean isDirty" + i + "() { return this._dirty;   }  ");
         }
         sb.append("}");
