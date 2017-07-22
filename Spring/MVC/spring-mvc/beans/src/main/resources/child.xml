@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="parent" class="com.tongdou.beans.bean.Parent">
+        <property name="id" value="parent2"/>
+        <property name="name" value="parent2"/>
+    </bean>
+
+    <bean id="child" class="com.tongdou.beans.bean.Child">
+        <property name="parent">
+            <ref local="parent"/>
+        </property>
+
+    </bean>
+
+    
+    <bean id="child2" class="com.tongdou.beans.bean.Child">
+        <property name="parent">
+            <bean class="com.tongdou.beans.bean.Parent">
+                <property name="id" value="innnerId"/>
+                <property name="name" value="innerName"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

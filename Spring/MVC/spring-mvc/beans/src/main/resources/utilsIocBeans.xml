@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="utilsIoc" class="com.tongdou.beans.bean.UtilsIoc">
+        <property name="favorates">
+            <list>
+                <value>running</value>
+                <value>pingpang</value>
+            </list>
+        </property>
+        <property name="friends">
+            <set>
+                <value>zhao</value>
+                <value>qian</value>
+                <value>sun</value>
+                <value>li</value>
+            </set>
+        </property>
+        <property name="sills">
+            <map>
+                <entry key="java" value="多线程，Spring mvc"></entry>
+                <entry key="mq" value="rocket mq， IBM mq"></entry>
+                <entry key="redis" value="ok"></entry>
+            </map>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="name">syz</prop>
+                <prop key="age">30</prop>
+                <prop key="location">anzhenxili</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

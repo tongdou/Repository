@@ -4,4 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="user" class="com.tongdou.beans.bean.User"></bean>
+
+    <bean id="simple" class="com.tongdou.beans.bean.Simple">
+        <property name="id" value="123.123.12.2"/>
+        <property name="name" value="dragon"/>
+    </bean>
+
+    <bean id="complex" class="com.tongdou.beans.bean.Complex">
+        <property name="simple" ref="simple"/>
+    </bean>
 </beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list id="list">
+        <value>mst_vendor_part</value>
+        <value>mst_da_mst_loc2</value>
+        <value>mst_cksp_mas_loc</value>
+        <value>mst_vendor_mas_loc</value>
+        <value>mst_vendor_da_sales</value>
+    </util:list>
+
+    <util:map id="map">
+        <entry key="partNum_itemFlag" value="100000019_N"></entry>
+    </util:map>
+
+
+</beans>
