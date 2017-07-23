@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="simple" class="com.tongdou.beans.bean.Simple" scope="singleton"/>
+    <bean id="complex1" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple"/>
+    <bean id="complex2" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple"/>
+    <bean id="complex3" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple"/>
+
+
+    <bean id="simple2" class="com.tongdou.beans.bean.Simple" scope="prototype"/>
+    <bean id="complex2_1" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple2"/>
+    <bean id="complex2_2" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple2"/>
+    <bean id="complex2_3" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple2"/>
+
+
+    <bean id="simple3" class="com.tongdou.beans.bean.Simple" scope="prototype"/>
+    <bean id="complex3_1" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple3"/>
+    <bean id="complex3_2" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple3"/>
+    <bean id="complex3_3" class="com.tongdou.beans.bean.Complex" p:simple-ref="simple3"/>
+</beans>
