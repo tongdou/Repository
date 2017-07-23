@@ -129,5 +129,9 @@ public class ApplicationContextTest {
 
         log.info(complex.getId() + complex.getName());
         log.info(simple.getId() + simple.getName());
+
+
     }
+
+
 }
