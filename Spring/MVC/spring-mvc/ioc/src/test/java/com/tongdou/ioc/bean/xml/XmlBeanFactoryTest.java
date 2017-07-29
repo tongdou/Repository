@@ -15,5 +15,7 @@ public class XmlBeanFactoryTest {
 
         XmlCar car = xmlFactory.getBean("car5", XmlCar.class);
         System.out.println(car.getColor());
+
+        // test git
     }
 }
