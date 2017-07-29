@@ -18,5 +18,7 @@ public class XmlBeanFactoryTest {
 
         // test git
         // test git2
+        // test git3
+
     }
 }
