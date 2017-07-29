@@ -17,5 +17,6 @@ public class XmlBeanFactoryTest {
         System.out.println(car.getColor());
 
         // test git
+        // test git2
     }
 }
