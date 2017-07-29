@@ -16,6 +16,7 @@
         <module>service</module>
         <module>web</module>
         <module>beans</module>
+        <module>ioc</module>
     </modules>
 
     <dependencies>
