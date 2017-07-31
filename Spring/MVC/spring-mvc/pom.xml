@@ -17,6 +17,7 @@
         <module>web</module>
         <module>beans</module>
         <module>ioc</module>
+        <module>concurrent</module>
     </modules>
 
     <dependencies>
