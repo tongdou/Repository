@@ -1,0 +1,26 @@
+package com.tongdou.aop.spring.advice;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import java.lang.reflect.WildcardType;
+
+/**
+ * 服务员
+ * Created by shenyuzhu on 2017/8/9.
+ */
+public class Waiter {
+    private static Log log = LogFactory.getLog(Waiter.class);
+
+    public String doService(String name) {
+        log.info(String.format("doServcie %s ", name));
+        return print();
+    }
+
+    private String print() {
+        log.info("print");
+        return "back";
+    }
+
+
+}
