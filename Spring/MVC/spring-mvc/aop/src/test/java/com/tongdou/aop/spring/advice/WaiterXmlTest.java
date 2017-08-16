@@ -27,5 +27,12 @@ public class WaiterXmlTest {
 
     }
 
+    @Test
+    public void surround_test() throws Exception {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:surround_advice.xml");
+        Waiter waiter = (Waiter) context.getBean("proxyWaiter");
+        waiter.doService("tongdou");
+    }
+
 
 }
