@@ -35,4 +35,9 @@ public class Waiter {
     }
 
 
+    public void monitorableMethod() {
+
+    }
+
+
 }

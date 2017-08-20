@@ -50,4 +50,19 @@ public class WaiterXmlTest {
         waiter.update();
     }
 
+
+    @Test
+    public void delegatingInterceptor() throws SQLException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:delegating_interceptor_advice.xml");
+        Waiter waiter = (Waiter) context.getBean("waiterProxy");
+
+        // not monitorable
+        waiter.monitorableMethod();
+
+        // monitorable
+        Monitorable monitorable = (Monitorable) context.getBean("waiterProxy");
+        monitorable.setMonitorActive(true);
+        waiter.monitorableMethod();
+
+    }
 }

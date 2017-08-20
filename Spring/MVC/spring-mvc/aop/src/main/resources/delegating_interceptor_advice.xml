@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="delegatingInterceptor" class="com.tongdou.aop.spring.advice.DelegatingInterceptor"></bean>
+    <bean id="waiter" class="com.tongdou.aop.spring.advice.Waiter"/>
+
+    <bean id="waiterProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interfaces="com.tongdou.aop.spring.advice.Monitorable"
+          p:target-ref="waiter"
+          p:interceptorNames="delegatingInterceptor"
+          p:proxyTargetClass="true"
+    />
+
+</beans>
