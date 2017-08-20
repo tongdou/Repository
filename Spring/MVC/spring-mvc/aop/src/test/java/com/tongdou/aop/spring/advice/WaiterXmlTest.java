@@ -5,6 +5,8 @@ import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.sql.SQLException;
+
 /**
  * Waiter tester for xml
  * Created by shenyuzhu on 2017/8/9.
@@ -34,5 +36,18 @@ public class WaiterXmlTest {
         waiter.doService("tongdou");
     }
 
+    @Test
+    public void afterThrowingInsert() throws SQLException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:after_throwing_advice.xml");
+        Waiter waiter = (Waiter) context.getBean("waiterProxy");
+        waiter.insert();
+    }
+
+    @Test
+    public void afterThrowingUpdate() throws SQLException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:after_throwing_advice.xml");
+        Waiter waiter = (Waiter) context.getBean("waiterProxy");
+        waiter.update();
+    }
 
 }

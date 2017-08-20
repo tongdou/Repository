@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.WildcardType;
+import java.sql.SQLException;
 
 /**
  * 服务员
@@ -22,6 +23,15 @@ public class Waiter {
     private String print() {
         log.info("print");
         return "back";
+    }
+
+
+    public void update() {
+        throw new RuntimeException("update");
+    }
+
+    public void insert() throws SQLException {
+        throw new SQLException("insert");
     }
 
 
