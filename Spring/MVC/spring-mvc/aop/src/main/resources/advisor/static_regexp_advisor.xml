@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="buyer" class="com.tongdou.aop.spring.advisor.Buyer"/>
+    <bean id="advice" class="com.tongdou.aop.spring.advisor.staticadvisor.GreetingAdvice"/>
+    <bean id="advisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"
+          p:advice-ref="advice">
+        <property name="patterns">
+            <list>
+                <value>.*greetTo.*</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="buyerProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:interceptorNames="advisor"
+          p:target-ref="buyer"
+    />
+
+</beans>

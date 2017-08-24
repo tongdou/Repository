@@ -26,4 +26,12 @@ public class GreetingAdvisorTest {
 
     }
 
+    @Test
+    public void regexpStaticAdvisor() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:advisor/static_regexp_advisor.xml");
+        Buyer buyer = (Buyer) context.getBean("buyerProxy");
+        buyer.seviceTo();
+        buyer.greetTo();
+    }
+
 }
