@@ -14,11 +14,13 @@ public class BuyerDelegateTest {
     @Test
     public void testControlFlow() {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:advisor/control_flow_advisor.xml");
-        Buyer buyer = (Buyer) context.getBean("buyer");
-        buyer.seviceTo();
-        buyer.greetTo();
+        Buyer buyerProxy = (Buyer) context.getBean("buyerProxy");
+        buyerProxy.seviceTo();
+        buyerProxy.greetTo();
+
         //==================
-
-
+        BuyerDelegate delegate = new BuyerDelegate();
+        delegate.setBuyer(buyerProxy);
+        delegate.service();
     }
 }

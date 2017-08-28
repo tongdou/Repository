@@ -16,7 +16,7 @@
           p:advice-ref="greetingAdvice"
     />
 
-    <bean id="buyProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+    <bean id="buyerProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
           p:interceptorNames="advisor"
           p:target-ref="buyer"
     />
