@@ -14,6 +14,10 @@ public class Buyer {
         logger.info("greetTo");
     }
 
+    public void greetTo(String name) {
+        logger.info("greetTo {}", name);
+    }
+
     public void seviceTo() {
         logger.info("serviceTo");
     }

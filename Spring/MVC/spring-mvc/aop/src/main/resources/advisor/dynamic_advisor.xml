@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="buyer" class="com.tongdou.aop.spring.advisor.Buyer"/>
+    <bean id="pointcut" class="com.tongdou.aop.spring.advisor.dynamic.DynamicPointcut"/>
+    <bean id="advice" class="com.tongdou.aop.spring.advisor.staticadvisor.GreetingAdvice"/>
+
+    <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
+          p:pointcut-ref="pointcut"
+          p:advice-ref="advice"
+    ></bean>
+
+    <bean id="buyProxy" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:target-ref="buyer"
+          p:interceptorNames="advisor"
+    ></bean>
+
+</beans>
