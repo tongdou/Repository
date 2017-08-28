@@ -2,7 +2,6 @@ package com.tongdou.beans.event;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 
 /**

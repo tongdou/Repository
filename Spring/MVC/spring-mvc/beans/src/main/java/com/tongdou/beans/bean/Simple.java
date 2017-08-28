@@ -1,7 +1,5 @@
 package com.tongdou.beans.bean;
 
-import org.springframework.stereotype.Component;
-
 /**
  * test set properties in xml
  * Created by shenyuzhu on 2017/7/16.

@@ -2,12 +2,9 @@ package com.tongdou.beans.bean;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.junit.Test;
-import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.logging.Logger;
+import org.testng.annotations.Test;
 
 /**
  * 测试FactoryBean的实现

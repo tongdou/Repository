@@ -15,7 +15,7 @@ import java.sql.SQLException;
  */
 @Repository
 public class UserDao {
-    public UserDao(){
+    public UserDao() {
         System.out.println("create dao====");
     }
 

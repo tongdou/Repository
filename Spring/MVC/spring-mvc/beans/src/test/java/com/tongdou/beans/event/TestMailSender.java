@@ -1,8 +1,8 @@
 package com.tongdou.beans.event;
 
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.testng.annotations.Test;
 
 /**
  * Created by shenyuzhu on 2017/8/1.

@@ -11,9 +11,10 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class LoginLogDao {
-    public LoginLogDao(){
+    public LoginLogDao() {
         System.out.println("create LoginLogDao===");
     }
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

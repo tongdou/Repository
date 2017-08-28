@@ -14,7 +14,7 @@ public class Seller {
         logger.info("greetTo");
     }
 
-    public void seviceTo(){
+    public void seviceTo() {
         logger.info("serviceTo");
     }
 

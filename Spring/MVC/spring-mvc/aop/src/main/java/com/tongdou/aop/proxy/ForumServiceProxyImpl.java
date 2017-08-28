@@ -1,7 +1,6 @@
 package com.tongdou.aop.proxy;
 
 import com.tongdou.aop.withoutaop.ForumService;
-import com.tongdou.aop.withoutaop.PerformanceMonitor;
 
 /**
  * implement forumService

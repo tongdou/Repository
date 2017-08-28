@@ -1,7 +1,6 @@
 package com.tongdou.aop.spring.advisor.dynamic;
 
 import com.tongdou.aop.spring.advisor.Buyer;
-import com.tongdou.aop.spring.advisor.Seller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.ClassFilter;

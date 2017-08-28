@@ -40,7 +40,7 @@ public class LoginController {
             userService.loginSuccess(user);
 
             request.getSession().setAttribute("user", user);
-            request.getSession().setAttribute("count",token);
+            request.getSession().setAttribute("count", token);
 
             return new ModelAndView("main");
         }

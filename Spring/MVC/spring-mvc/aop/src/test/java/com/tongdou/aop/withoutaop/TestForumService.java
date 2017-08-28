@@ -1,6 +1,6 @@
 package com.tongdou.aop.withoutaop;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 /**
  * forum service time cost test

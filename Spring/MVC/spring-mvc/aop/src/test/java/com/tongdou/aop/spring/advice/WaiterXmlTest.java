@@ -1,9 +1,8 @@
 package com.tongdou.aop.spring.advice;
 
-import org.junit.Test;
-import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.testng.annotations.Test;
 
 import java.sql.SQLException;
 
@@ -40,14 +39,23 @@ public class WaiterXmlTest {
     public void afterThrowingInsert() throws SQLException {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:after_throwing_advice.xml");
         Waiter waiter = (Waiter) context.getBean("waiterProxy");
-        waiter.insert();
+        try {
+            waiter.insert();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void afterThrowingUpdate() throws SQLException {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:after_throwing_advice.xml");
         Waiter waiter = (Waiter) context.getBean("waiterProxy");
-        waiter.update();
+        try {
+            waiter.update();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 

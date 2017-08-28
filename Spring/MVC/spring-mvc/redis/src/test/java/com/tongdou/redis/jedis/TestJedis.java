@@ -1,8 +1,8 @@
 package com.tongdou.redis.jedis;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.annotations.Test;
 import redis.clients.jedis.Jedis;
 
 /**
@@ -10,7 +10,7 @@ import redis.clients.jedis.Jedis;
  * Created by shenyuzhu on 2017/8/2.
  */
 public class TestJedis {
-    private static Log log = LogFactory.getLog(TestJedis.class);
+    private static Logger log = LoggerFactory.getLogger(TestJedis.class);
 
     /**
      * create jedis connection

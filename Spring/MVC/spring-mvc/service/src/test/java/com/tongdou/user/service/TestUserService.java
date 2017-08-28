@@ -1,25 +1,17 @@
 package com.tongdou.user.service;
 
 import com.tongdou.user.domain.User;
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 /**
  * Created by shenyuzhu on 17/1/30.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"/com/tongdou/service/applicationContext.xml"})
-public class TestUserService {
+public class TestUserService extends AbstractTestNGSpringContextTests {
     @Autowired
     private UserService userService;
 

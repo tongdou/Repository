@@ -2,7 +2,6 @@ package com.tongdou.aop.spring.advice;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.aop.AfterAdvice;
 import org.springframework.aop.ThrowsAdvice;
 
 import java.sql.SQLException;

@@ -15,7 +15,7 @@
 
     </bean>
 
-    
+
     <bean id="child2" class="com.tongdou.beans.bean.Child">
         <property name="parent">
             <bean class="com.tongdou.beans.bean.Parent">

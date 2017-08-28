@@ -1,8 +1,7 @@
 package com.tongdou.aop.proxy;
 
 import com.tongdou.aop.withoutaop.ForumService;
-import com.tongdou.aop.withoutaop.ForumServiceImpl;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.lang.reflect.Proxy;
 

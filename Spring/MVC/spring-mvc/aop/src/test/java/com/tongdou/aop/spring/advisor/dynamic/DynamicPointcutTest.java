@@ -1,11 +1,10 @@
 package com.tongdou.aop.spring.advisor.dynamic;
 
 import com.tongdou.aop.spring.advisor.Buyer;
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * testor

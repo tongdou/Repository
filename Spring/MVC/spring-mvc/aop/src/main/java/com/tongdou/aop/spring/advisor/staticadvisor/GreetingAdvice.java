@@ -3,9 +3,7 @@ package com.tongdou.aop.spring.advisor.staticadvisor;
 import com.tongdou.aop.spring.advisor.Seller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.aop.BeforeAdvice;
 import org.springframework.aop.MethodBeforeAdvice;
-import org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor;
 
 import java.lang.reflect.Method;
 

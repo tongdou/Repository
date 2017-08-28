@@ -1,9 +1,8 @@
 package com.tongdou.aop.spring.advice;
 
-import org.junit.Test;
 import org.springframework.aop.framework.ProxyFactory;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * Waiter tester

@@ -1,14 +1,11 @@
 package com.tongdou.aop.cglib;
 
 import com.tongdou.aop.proxy.ForumServiceProxyImpl;
-import com.tongdou.aop.withoutaop.ForumService;
-import com.tongdou.aop.withoutaop.ForumServiceImpl;
 import net.sf.cglib.core.DebuggingClassWriter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * Test cglib proxy

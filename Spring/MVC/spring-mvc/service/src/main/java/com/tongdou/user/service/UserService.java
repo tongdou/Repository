@@ -19,7 +19,7 @@ public class UserService {
     @Autowired
     private LoginLogDao loginLogDao;
 
-    public UserService(){
+    public UserService() {
         System.out.println("created service===2222====");
     }
 
