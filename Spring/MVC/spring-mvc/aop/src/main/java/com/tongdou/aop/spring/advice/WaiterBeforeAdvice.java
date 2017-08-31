@@ -1,7 +1,7 @@
 package com.tongdou.aop.spring.advice;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.aop.MethodBeforeAdvice;
 
 import java.lang.reflect.Method;
@@ -11,9 +11,10 @@ import java.lang.reflect.Method;
  * Created by shenyuzhu on 2017/8/9.
  */
 public class WaiterBeforeAdvice implements MethodBeforeAdvice {
-    private static Log log = LogFactory.getLog(Waiter.class);
+
+    private static Logger log = LoggerFactory.getLogger(WaiterBeforeAdvice.class);
 
     public void before(Method method, Object[] objects, Object o) throws Throwable {
-        log.info(String.format(" Welcome! %s", objects));
+        log.info(String.format(" Welcome! {}", objects));
     }
 }
