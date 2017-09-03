@@ -21,6 +21,7 @@
         <module>redis</module>
         <module>aop</module>
         <module>annotation</module>
+        <module>problem</module>
     </modules>
 
 
