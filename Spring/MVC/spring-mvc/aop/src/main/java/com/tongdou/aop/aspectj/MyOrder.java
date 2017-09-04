@@ -1,10 +1,16 @@
 package com.tongdou.aop.aspectj;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Created by shenyuzhu on 2017/9/3.
  */
 public class MyOrder implements Order {
+
+    Logger logger = LoggerFactory.getLogger(MyJob.class);
+
     public MyOrder() {
     }
 
@@ -18,6 +24,7 @@ public class MyOrder implements Order {
 
 
     public String getId() {
+        logger.info("getId");
         return id;
     }
 
