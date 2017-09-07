@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:config>
+        <aop:aspect ref="schemaAspect">
+            <aop:before method="beforeLog" pointcut="execution(* com..*Dao.save()) or execution(* com..*Dao.update())"/>
+            <aop:after-returning method="afterLog"
+                                 pointcut="execution(* com..*Dao.save()) or execution(* com..*Dao.update())"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="schemaAspect" class="com.tongdou.aop.aspectj.schame.SchemaAspect"/>
+    <bean id="dao" class="com.tongdou.aop.aspectj.schame.SchemaAspectDao"/>
+</beans>
