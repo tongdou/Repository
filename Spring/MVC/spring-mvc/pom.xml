@@ -22,6 +22,7 @@
         <module>aop</module>
         <module>annotation</module>
         <module>problem</module>
+        <module>agent</module>
     </modules>
 
 

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: logback-core-1.2.3.jar logback-classic-1.2.3.jar slf4j-api
+ -1.7.25.jar
+Main-Class: com.tongdou.agent.TestAgent
+Premain-Class: com.tongdou.agent.agent.Agent
+
