@@ -1,0 +1,1 @@
+java -javaagent:agent.jar com.tongdou.agent.TestAgent
