@@ -21,4 +21,7 @@ public interface ForumService {
 
 
     public void addWithoutTransactionTopic(final Topic topic);
+
+
+    public void addTransactionProxyTopic(final Topic topic);
 }

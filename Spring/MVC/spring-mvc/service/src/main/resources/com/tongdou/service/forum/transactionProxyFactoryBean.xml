@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+          p:dataSource-ref="dataSource"/>
+
+    <bean id="forumServiceTarget" class="com.tongdou.serviceImpl.forum.ForumServiceImpl"/>
+
+
+    <bean id="forumServiceProxy"
+          class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+          p:transactionManager-ref="txManager"
+          p:target-ref="forumServiceTarget"
+    >
+        <property name="transactionAttributes">
+            <props>
+                <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
