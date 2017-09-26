@@ -24,4 +24,6 @@ public interface ForumService {
 
 
     public void addTransactionProxyTopic(final Topic topic);
+
+    public void addTxAopTopic(final Topic topic);
 }
