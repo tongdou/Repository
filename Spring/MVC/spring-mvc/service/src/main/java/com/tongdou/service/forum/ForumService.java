@@ -20,10 +20,32 @@ public interface ForumService {
     long getForumNum();
 
 
+    /**
+     * test without transaction
+     *
+     * @param topic
+     */
     public void addWithoutTransactionTopic(final Topic topic);
 
 
+    /**
+     * test proxy transaction
+     *
+     * @param topic
+     */
     public void addTransactionProxyTopic(final Topic topic);
 
+    /**
+     * test aop transaction
+     *
+     * @param topic
+     */
     public void addTxAopTopic(final Topic topic);
+
+    /**
+     * 测试annotation transaction
+     *
+     * @param topic
+     */
+    public void addTxAnnotationTopic(final Topic topic);
 }

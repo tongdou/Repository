@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.*;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -172,6 +173,38 @@ public class ForumServiceImpl implements ForumService {
             }
         });
 
+
+        // save post
+        String savePostSql = "insert into post(name) values(?)";
+        final List<Post> postList = topic.getPostList();
+        jdbcTemplate.batchUpdate(savePostSql, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement ps, int i) throws SQLException {
+                Post post = postList.get(i);
+                ps.setString(1, post.getName());
+            }
+
+            @Override
+            public int getBatchSize() {
+                return postList.size();
+            }
+        });
+    }
+
+    @Override
+    @Transactional
+    public void addTxAnnotationTopic(final Topic topic) {
+        // save topic
+        String sql = "insert into topic(name) values(?)";
+        jdbcTemplate.update(sql, new PreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement ps) throws SQLException {
+                ps.setString(1, topic.getName());
+            }
+        });
+
+        if (true)
+            throw new RuntimeException();
 
         // save post
         String savePostSql = "insert into post(name) values(?)";
