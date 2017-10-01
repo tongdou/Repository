@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.URL;
+import java.util.List;
 
 /**
  * Created by shenyuzhu on 2017/10/1.
@@ -39,7 +40,7 @@ public class LobDaoTest extends AbstractTestNGSpringContextTests {
         try {
             jdbcTemplate.execute(createArticle);
         } catch (Exception e) {
-            logger.error("jdbcTemplate.execute sql:{}", createArticle, e);
+            logger.error("jdbcTemplate.execute sql:{}", createArticle);
         }
     }
 
@@ -51,6 +52,15 @@ public class LobDaoTest extends AbstractTestNGSpringContextTests {
         article.setImage(new File(this.getClass().getResource("/mingyu.JPG").getPath()));
 
         lobDao.insert(article);
+    }
+
+    @Test
+    public void testGet() throws Exception {
+        List<Article> list = lobDao.get();
+
+        for (Article article : list) {
+            logger.info(article.getImage().getPath());
+        }
     }
 
 }
