@@ -6,6 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.sql.Connection;
@@ -38,7 +39,7 @@ public class TestProperties {
     /**
      * 初始化数据库，为模拟Diamond做准备
      */
-    @Test
+    @BeforeClass
     public void initDatabase() {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:properties/dataSource.xml");

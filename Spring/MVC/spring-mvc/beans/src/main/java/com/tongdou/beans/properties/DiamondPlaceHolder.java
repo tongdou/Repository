@@ -4,6 +4,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import org.springframework.util.StringUtils;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,7 +22,6 @@ public class DiamondPlaceHolder extends PropertyPlaceholderConfigurer {
     private static final Log log = LogFactory.getLog(DiamondPlaceHolder.class);
     private final String DIAMOND = "diamond()";
 
-
     @Override
     protected void convertProperties(Properties props) {
         super.convertProperties(props);
@@ -29,7 +29,8 @@ public class DiamondPlaceHolder extends PropertyPlaceholderConfigurer {
         Map<String, String> diamond = getProperties();
         for (Map.Entry entry : props.entrySet()) {
             if (DIAMOND.equals(entry.getValue())) {
-                entry.setValue(diamond.get(entry.getKey()));
+                if (!StringUtils.isEmpty(diamond.get(entry.getKey())))
+                    entry.setValue(diamond.get(entry.getKey()));
             }
         }
 

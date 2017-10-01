@@ -44,7 +44,12 @@ public class ForumServiceImplWithoutTransactionTest extends AbstractTestNGSpring
         topic.getPostList().add(post2);
 
         // save into database
-        forumService.addWithoutTransactionTopic(topic);
+        try {
+            forumService.addWithoutTransactionTopic(topic);
+        } catch (Exception e) {
+            logger.error("forumService.addWithoutTransactionTopic");
+        }
+
     }
 
 
