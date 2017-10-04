@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "mybatis/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="false"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.tongdou.beans.bean.forum.Forum" alias="forum"/>
+        <typeAlias type="com.tongdou.beans.bean.forum.Topic" alias="topic"/>
+        <typeAlias type="com.tongdou.beans.bean.forum.Post" alias="post"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="mybatis/mapper/forum-template.xml"/>
+    </mappers>
+</configuration>
