@@ -11,5 +11,7 @@
         <constructor-arg ref="sqlSessionFactoryBean"/>
     </bean>
 
-    <bean id="forumTemplateDao" class="com.tongdou.dao.mybatis.ForumTemplateDao"/>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+          p:sqlSessionFactory-ref="sqlSessionFactoryBean"
+          p:basePackage="com.tongdou.dao.mybatis"/>
 </beans>
