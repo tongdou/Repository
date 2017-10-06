@@ -1,7 +1,5 @@
 package com.tongdou.jvm.gc;
 
-import com.sun.org.apache.xerces.internal.dom.PSVIAttrNSImpl;
-
 import java.util.ArrayList;
 import java.util.List;
 

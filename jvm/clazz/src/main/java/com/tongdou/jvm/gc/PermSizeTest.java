@@ -1,15 +1,12 @@
 package com.tongdou.jvm.gc;
 
 import com.itranswarp.compiler.JavaStringCompiler;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
-import java.io.*;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.Map;
 
 /**
  * set VM options
