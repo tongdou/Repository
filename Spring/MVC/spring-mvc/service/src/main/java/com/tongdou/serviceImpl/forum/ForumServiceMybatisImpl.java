@@ -21,7 +21,6 @@ import java.util.List;
 /**
  * Created by shenyuzhu on 2017/9/23.
  */
-@Service
 public class ForumServiceMybatisImpl {
 
     @Autowired
