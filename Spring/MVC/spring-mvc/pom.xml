@@ -23,6 +23,7 @@
         <module>annotation</module>
         <module>problem</module>
         <module>agent</module>
+        <module>job</module>
     </modules>
 
 
