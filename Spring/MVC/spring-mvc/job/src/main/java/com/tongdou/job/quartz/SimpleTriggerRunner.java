@@ -1,8 +1,7 @@
-package com.tongdou.job;
+package com.tongdou.job.quartz;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-import org.quartz.impl.triggers.SimpleTriggerImpl;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,4 +1,4 @@
-package com.tongdou.job;
+package com.tongdou.job.quartz;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;

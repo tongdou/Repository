@@ -1,11 +1,10 @@
-package com.tongdou.job;
+package com.tongdou.job.quartz;
 
+import com.tongdou.job.quartz.SimpleTriggerRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 /**
  * Created by shenyuzhu on 2017/10/7.

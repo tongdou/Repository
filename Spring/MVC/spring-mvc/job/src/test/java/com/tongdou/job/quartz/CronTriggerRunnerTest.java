@@ -1,6 +1,6 @@
-package com.tongdou.job;
+package com.tongdou.job.quartz;
 
-import org.quartz.CronScheduleBuilder;
+import com.tongdou.job.quartz.CronTriggerRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
