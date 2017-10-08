@@ -17,7 +17,7 @@ public class SimpleTriggerRunner {
         JobBuilder jobBuilder = JobBuilder.newJob(SimpleJob.class);
 
         // 3秒执行一次
-        SimpleScheduleBuilder triggerBuilder = SimpleScheduleBuilder.repeatSecondlyForever(3);
+        SimpleScheduleBuilder triggerBuilder = SimpleScheduleBuilder.repeatSecondlyForever(1);
         Trigger trigger = TriggerBuilder.newTrigger().withIdentity("testSimpleTrigger").withSchedule(triggerBuilder).build();
 
         SchedulerFactory schedulerFactory = new StdSchedulerFactory();
@@ -26,7 +26,7 @@ public class SimpleTriggerRunner {
         scheduler.start();
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
