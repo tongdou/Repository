@@ -24,6 +24,7 @@
         <module>problem</module>
         <module>agent</module>
         <module>job</module>
+        <module>mvc</module>
     </modules>
 
 
